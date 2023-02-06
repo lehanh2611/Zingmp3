@@ -1,0 +1,31 @@
+.SideBar {
+  width: 240px;
+  height: 100%;
+  text-align: center;
+  background-color: var(--sidebar);
+  transition: ease 0.3s;
+}
+
+:global(.miniSize).SideBar {
+  width: 70px;
+  background-color: var(--sidebar-popup);
+}
+
+:global(.miniSize) .logo {
+  justify-content: center;
+}
+
+:global(.miniSize) .logo img {
+  padding: 0;
+  height: 45px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  img {
+    height: 34px;
+    padding-left: 28px;
+  }
+}

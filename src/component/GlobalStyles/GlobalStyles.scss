@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Crimson+Text&family=Hanken+Grotesk&family=Nunito:ital,wght@0,300;0,400;0,500;1,400&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@100;300;400;700&display=swap");
+
+:root {
+  --white: #ffffff;
+  --black: #32323d;
+  --white-bland: #dadada;
+  --primary: #4b1178;
+  --header: rgba(55, 7, 93, 0.8);
+  --sidebar: hsla(0, 0%, 100%, 0.05);
+  --panel: #5d218c;
+  --panel-options: #5d218c;
+  --sidebar-popup: #572f90;
+  --seperate: #553274;
+  --alpha: hsla(0, 0%, 100%, 0.1);
+  --purple: #158370;
+  --purple-primary: #ed2b91;
+  --yellow: #ffdb00;
+}
+
+html {
+  font-size: 10px;
+  color: var(--white);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+a {
+  display: block;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}

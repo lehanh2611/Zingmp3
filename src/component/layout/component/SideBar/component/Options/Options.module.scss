@@ -1,0 +1,135 @@
+.optionList {
+  margin: 6px 0;
+
+  &:nth-child(2):after {
+    content: "";
+    display: block;
+    width: 80%;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid var(--seperate);
+  }
+
+  &:nth-child(3) {
+    margin-top: 15px;
+  }
+}
+
+.optionItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  padding: 6px 26px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+
+  span {
+    color: var(--white-bland);
+  }
+
+  &[state="active"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--purple-primary);
+  }
+
+  &[state="active"] {
+    background-color: var(--alpha);
+  }
+
+  &[state="active"] span,
+  &:hover span {
+    color: var(--white);
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-left: 10px;
+  }
+
+  img {
+    filter: brightness(0.8);
+    width: 22px;
+  }
+
+  img:nth-child(3) {
+    width: 35px;
+    margin-left: 10px;
+    opacity: 0;
+    animation: show 0.3s ease forwards;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes show {
+    to {
+      opacity: 1;
+    }
+  }
+
+  &[state="active"] img,
+  &:hover img,
+  img:nth-child(3) {
+    filter: brightness(1);
+  }
+
+  i {
+    display: none;
+    margin-left: auto;
+    height: fit-content;
+    font-size: 1.8rem;
+  }
+  &:not([state="active"]):hover i {
+    display: block;
+  }
+}
+
+// mini size
+:global(.miniSize) .optionList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:global(.miniSize) .optionItem {
+  padding: 0;
+  justify-content: center;
+  height: 50px;
+  &::before {
+    display: none;
+  }
+}
+
+:global(.miniSize) .optionItem img {
+}
+
+:global(.miniSize) .optionItem i,
+:global(.miniSize) .optionItem span,
+:global(.miniSize) .optionItem img:nth-child(3) {
+  display: none !important;
+}
+
+.optionItem span {
+  animation: showTitle ease 0.3s forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+@keyframes showTitle {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
